@@ -26,7 +26,7 @@ PROJECT=/go/src/my-project
 
 # Change ports to map your own project
 docker run --rm -it \
-    -v $(pwd)/$PROJECT \
+    -v $(pwd):$PROJECT \
     -w $PROJECT \
     -p 8000:8000 \
     metal3d/go-fresh:1.6
@@ -46,7 +46,7 @@ PROJECT=/go/src/my-project
 
 # Change ports to map your own project
 docker run --rm -it \
-    -v $(pwd)/$PROJECT \
+    -v $(pwd):$PROJECT \
     -w $PROJECT \
     -p 8000:8000 \
     metal3d/go-fresh:1.6 \
